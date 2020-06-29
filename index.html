@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js example</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <script src="p5.js"></script>
+  <script src="new.js"></script>
+</head>
+
+<body>
+  <script> 
+    window.addEventListener('click',function(e){
+      if(start_flag == true)
+        mark(Math.floor(e.x/w), Math.floor(e.y/h));
+    });
+    
+    function func(){
+      start(document.getElementById("fname").value,document.getElementById("fname1").value);
+    }
+  
+  </script>  
+  <input style="
+      position: absolute;
+      left: 1000px;
+      top: 150px;
+      text-align: center;
+      border-radius:4px;
+      margin:8px 0;
+      outline:none;
+      padding:8px;
+      box-sizing:border-box;
+      transition:.3s;" 
+  type="text" id="fname" placeholder="First player" autocomplete="off" required>
+  <input style="
+      position: absolute;
+      left: 1000px;
+      top: 200px;
+      text-align: center;
+      border-radius:4px;
+      margin:8px 0;
+      outline:none;
+      padding:8px;
+      box-sizing:border-box;
+      transition:.3s;" 
+  type="text" id="fname1" placeholder="Second player" autocomplete="off" required>
+  <button style="
+      position: absolute;
+      left: 980px;
+      top: 255px;
+      text-align: center;
+      border-radius:4px;
+      margin:8px 0;
+      outline:none;
+      padding:8px;
+      box-sizing:border-box;
+      transition:.3s;"
+  type="button" onclick="func()" id="new">New game!</button>
+  <button style="
+      position: absolute;
+      left: 1080px;
+      top: 255px;
+      text-align: center;
+      border-radius:4px;
+      margin:8px 0;
+      outline:none;
+      padding:8px;
+      box-sizing:border-box;
+      transition:.3s;"
+  type="button" onclick="yeni()" id="new">Continue game!</button>
+  <text style="
+      position: absolute;
+      left: 1000px;
+      top: 350px;
+      font-size: 30px;
+      font-weight: bold;
+      "
+  id="text"></text>
+  <text style="
+      position: absolute;
+      left: 1060px;
+      top: 400px;
+      font-size: 50px;
+      font-weight: bold;
+      "
+  id="text1"></text>
+  <text style="
+      position: absolute;
+      left: 1052px;
+      top: 470px;
+      font-size: 25px;
+      font-weight: bold;
+      "
+  id="text2"></text>
+  
+</body>
+
+</html>
